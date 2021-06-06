@@ -13,6 +13,7 @@ const showForecast = () => {
         document.getElementById("loadingButton").style.display = "none";
         document.getElementById("forecast").style.display = "none";
         document.getElementById("dataNotFoundDiv").style.display = "none";
+        document.getElementById("footer").style.position = "fixed";
     } else {
         document.getElementById("error").innerHTML = "";
         var xhttp = new XMLHttpRequest();
@@ -23,6 +24,7 @@ const showForecast = () => {
                 document.getElementById("loadingButton").style.display = "none";
                 document.getElementById('forecast').style.display = "block";
                 document.getElementById("dataNotFoundDiv").style.display = "none";
+                document.getElementById("footer").style.position = "relative";
 
                 const data = JSON.parse(this.responseText);
 
@@ -51,6 +53,7 @@ const showForecast = () => {
             } else if (this.readyState == 1 || this.readyState == 3) {
                 document.getElementById("showForecast").style.display = "none";
                 document.getElementById("loadingButton").style.display = "block";
+                document.getElementById("footer").style.position = "fixed";
             } else {
                 //Technical issue
             }

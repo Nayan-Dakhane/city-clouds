@@ -37,3 +37,34 @@
 .dataNotFoundDiv {
     display: none;
 }
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #D3D3D3;
+    color: black;
+    text-align: center;
+  }
+  
+.icon-pack {
+    display: inline-block;
+    margin: 0px 10px;
+}
+
+.icon-pack a {
+    text-decoration: none;
+}
+
+.facebook {
+    color: 	#4267B2;
+}
+
+.twitter {
+    color: #00acee;
+}
+
+.instagram {
+    color: #8a3ab9;
+}
