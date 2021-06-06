@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>City Clouds</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./resources/css/style.css">
+</head>
+
+<body>
+    <section class="header">
+        <div class="container-fluid pt-4 pb-4 text-center text-dark">
+            <h1 class="animate__animated animate__fadeInUp">CITY CLOUDS</h1>
+        </div>
+    </section>
+    <section class="description">
+        <div class="container pt-4 pb-4">
+            <h2>Description</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem recusandae facere saepe non sapiente laudantium asperiores corrupti officiis rerum! Quia labore architecto rem beatae, iste sint libero sunt laudantium sequi. Sapiente nam repudiandae dolor maiores similique? Optio eum repellendus vero cum eveniet sapiente dolores eaque maiores earum enim, recusandae ea.</p>
+        </div>
+    </section>
+    <section class="data-entry">
+        <div class="container">
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="inputCity">City</label>
+                    <input type="text" class="form-control" id="inputCity">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputZip">Zip</label>
+                    <input type="text" class="form-control" id="inputZip">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputCountry">Country Code</label>
+                    <select id="inputCountry" class="form-control">
+                    <option>--select--</option>
+                      <option value="in">INDIA</option>
+                      <option value="us">US</option>
+                      <option value="br">BRAZIL</option>
+                      <option value="dk">DENMARK</option>
+                    </select>
+                  </div>
+            </div>
+            <div class="d-flex justify-content-center pt-3">
+                <button id="showForecast" class="btn btn-outline-secondary" onclick="showForecast()">SHOW FORECAST</button>
+                <button class="btn btn-primary loadingButton" id="loadingButton" disabled>
+                    <span class="spinner-grow spinner-grow-sm"></span>
+                    Loading..
+                </button>
+            </div>
+            <div class="d-flex justify-content-center pt-2">
+                <div id="error" class="error"></div>
+            </div>
+        </div>
+    </section>
+    <section class="forecast animate__animated animate__fadeInUp" id="forecast">
+        <div class="container pt-5 pb-5">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header"><b>Basic Info</b></div>
+                        <div class="card-body">
+                            <span id="name"></span><br>
+                            <span id="country"></span><br>
+                            <span id="long"></span><br>
+                            <span id="lat"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header"><b>Forecast</b></div>
+                        <div class="card-body">
+                            <span id="visibility-0"></span><br>
+                            <span id="visibility-1"></span><br>
+                            <span id="visibility-2"></span><br>
+                            <span id="visibility-3"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header"><b>Details</b></div>
+                        <div class="card-body">
+                            <span id="details-0"></span><br>
+                            <span id="details-1"></span><br>
+                            <span id="details-2"></span><br>
+                            <span id="details-3"></span><br>
+                            <span id="details-4"></span><br>
+                            <span id="details-5"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="dataNotFound">
+        <div class="dataNotFoundDiv" id="dataNotFoundDiv"> 
+            <div class="d-flex justify-content-center pt-3" id="dataNotFound"></div>
+        </div>
+    </section>
+    <script src="./resources/js/script.js"></script>
+</body>
+</html>
