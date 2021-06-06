@@ -55,7 +55,7 @@ const showForecast = () => {
                 //Technical issue
             }
         };
-        xhttp.open("GET", "http://api.openweathermap.org/data/2.5/weather?q="+city+"&zip="+zipcode+","+countryCode+"&appid=2f1ccdbed4ba374f8a8ede5ee7fd0571", true);
+        xhttp.open("GET", "https://api.openweathermap.org/data/2.5/weather?q="+city+"&zip="+zipcode+","+countryCode+"&appid=2f1ccdbed4ba374f8a8ede5ee7fd0571", true);
         xhttp.send();
 
     }
