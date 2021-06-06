@@ -69,6 +69,12 @@
     color: #8a3ab9;
 }
 
+
+@media only screen and (max-width: 1370px) {
+    .footer {
+        position: relative;
+    }
+
 @media only screen and (max-width: 480px) {
     .footer {
         position: relative;
